@@ -9,12 +9,16 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'winston.lovestoblog.com/motorsport/',
+        baseUrl: "winston.lovestoblog.com/motorsport/",
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
-        protocol: 'http',
+        protocol: "http",
         // Use 'Advanced Custom Fields' Wordpress plugin
+        restApiRoutePrefix: "wp-json",
+        // The rest api route prefix that your WordPress site is using.
+        // Sometimes this is modified by WordPress plugins.
+        // If not set, it uses the default of "wp-json"
         useACF: false,
         auth: {},
         // Set to true to debug endpoints on 'gatsby build'
